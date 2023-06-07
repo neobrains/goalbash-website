@@ -1,4 +1,5 @@
 <script>
+	import { slide } from 'svelte/transition';
 	const faqs = [
 		{
 			qno: 1,
@@ -32,7 +33,7 @@
 		}
 	];
 
-	let currentlyOpen;
+	let current = null;
 </script>
 
 <div
@@ -47,41 +48,21 @@
 			>
 		</div>
 
-		<div class="flex flex-col gap-4 w-full lg:w-1/2 select-none">
-			{#each faqs as faq}
+		<div class="grid gap-2 w-full">
+			{#each faqs as faq, i}
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<div class="border-2 p-8 border-black rounded-2xl bg-green-100">
-					<details on:click={() => currentlyOpen = faq.qno} class="font-medium">
-						<summary>{faq.question}</summary>
-					</details>
-					<!-- svelte-ignore a11y-incorrect-aria-attribute-type -->
-					<div class="reveal font-normal" aria-hidden="aria-hidden">
-						<div>
-							<p>{faq.answer}</p>
-						</div>
+				<div
+					on:click={() => (current = current === faq.qno ? null : faq.qno)}
+					class="p-8 rounded-2xl bg-green-100 border-2 border-black"
+				>
+					<div class="font-medium">
+						<span class="text-start">{faq.question}</span>
 					</div>
+					{#if current === i + 1}
+						<p class="font-normal text-start" transition:slide>{faq.answer}</p>
+					{/if}
 				</div>
 			{/each}
 		</div>
 	</div>
 </div>
-
-<style>
-	details summary ~ * {
-		position: fixed;
-		top: 100%;
-	}
-	details + .reveal {
-		display: grid;
-		grid-template-rows: 0fr;
-		grid-gap: 1em;
-		transition: 0.4s;
-	}
-	details[open] + .reveal {
-		grid-template-rows: 1fr;
-	}
-	details + .reveal div {
-		overflow: hidden;
-		margin: 0;
-	}
-</style>
