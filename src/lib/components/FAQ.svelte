@@ -36,15 +36,15 @@
 	let current = null;
 </script>
 
-<div
+<section
 	class="flex flex-col gap-16 p-10 md:px-24 lg:px-32 py-32 w-full items-center font-tt-norms-pro overflow-x-hidden"
 >
 	<div class="flex flex-col lg:flex-row w-full max-w-7xl items-center lg:items-start gap-8">
 		<div class="flex flex-col gap-4 w-full lg:w-1/2">
-			<span class="text-4xl font-medium text-center lg:text-start">Frequently Asked Questions</span>
-			<span
+			<h2 class="text-4xl font-medium text-center lg:text-start">Frequently Asked Questions</h2>
+			<h4
 				class="text-lg font-medium text-center lg:text-start hover:text-green-400 transition-all duration-300 ease-in-out cursor-pointer"
-				>Still need help? Join us on Discord.</span
+				>Still need help? Join us on Discord.</h4
 			>
 		</div>
 
@@ -55,9 +55,9 @@
 					on:click={() => (current = current === faq.qno ? null : faq.qno)}
 					class="p-8 rounded-2xl bg-green-100 border-2 border-black"
 				>
-					<div class="font-medium">
-						<span class="text-start">{faq.question}</span>
-					</div>
+					<button class="font-medium">
+						<p class="text-start">{faq.question}</p>
+					</button>
 					{#if current === i + 1}
 						<p class="font-normal text-start" transition:slide>{faq.answer}</p>
 					{/if}
@@ -65,4 +65,4 @@
 			{/each}
 		</div>
 	</div>
-</div>
+</section>

@@ -3,7 +3,6 @@
 	export let nav;
 
 	export let isMobileNavOpen = false;
-	export let isMobileNavHidden = true;
 	export let toggleMobileNav;
 
 	onMount(async () => {
@@ -27,10 +26,10 @@
 
 <div
 	id="mobilenav"
-	class:h-0={isMobileNavHidden}
+	class:h-0={!isMobileNavOpen}
 	class:h-screen={isMobileNavOpen}
 	class:h-[100dvh]={isMobileNavOpen}
-	class="h-0 w-screen fixed z-10 top-0 left-0 bg-black text-white overflow-x-hidden flex flex-col items-center justify-center gap-6"
+	class="h-0 w-screen fixed z-10 top-0 left-0 bg-black text-white overflow-x-hidden flex flex-col items-center justify-center gap-6 lg:hidden"
 >
 	<div class="flex p-10 w-full items-end justify-end transition-all ease-in-out duration-300">
 		<!-- svelte-ignore a11y-click-events-have-key-events -->

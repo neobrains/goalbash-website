@@ -2,17 +2,17 @@
 	let contactSourceSelected;
 </script>
 
-<div
+<section
 	id="contact"
 	class="flex flex-col w-full p-10 md:px-24 lg:px-32 font-tt-norms-pro overflow-x-hidden items-center"
 >
 	<div class="flex flex-col w-full max-w-7xl gap-16">
 		<div class="flex flex-col items-center lg:items-start gap-2">
-			<span class="text-4xl font-medium tracking-wider text-center lg:text-start w-full"
-				>Love to hear from you,</span
+			<h2 class="text-4xl font-medium tracking-wider text-center lg:text-start w-full"
+				>Love to hear from you,</h2
 			>
-			<span class="text-4xl font-medium tracking-wider text-center lg:text-start w-full"
-				>Get in touch 👋</span
+			<h2 class="text-4xl font-medium tracking-wider text-center lg:text-start w-full"
+				>Get in touch 👋</h2
 			>
 		</div>
 		<form id="contactform" class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
@@ -67,7 +67,7 @@
 			>Just Send ↗</button
 		>
 	</div>
-</div>
+</section>
 
 <style>
 	/* Come from up animation */

@@ -10,11 +10,9 @@
 	];
 
 	let isMobileNavOpen = false;
-	let isMobileNavHidden = true;
 
 	function toggleMobileNav() {
 		isMobileNavOpen = !isMobileNavOpen;
-		isMobileNavHidden = !isMobileNavHidden;
 	}
 
 	onMount(async () => {
@@ -38,13 +36,13 @@
 	});
 </script>
 
-<MobileNavigation {nav} {isMobileNavHidden} {isMobileNavOpen} {toggleMobileNav} />
+<MobileNavigation {nav} {isMobileNavOpen} {toggleMobileNav} />
 
 <main class="flex flex-col min-h-screen font-tt-norms-pro overflow-hidden">
 	<div class="flex flex-col lg:flex-row h-full lg:h-screen w-full">
 		<div class="h-full w-full lg:w-1/3 bg-green-500 flex flex-col p-10">
 			<div class="flex items-center justify-between">
-				<span class="text-2xl font-semibold tracking-wider">GOALBASH</span>
+				<h2 class="text-2xl font-semibold tracking-wider">GOALBASH</h2>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<svg on:click={toggleMobileNav} id="mobileOpenNav" class="lg:hidden" viewBox="0 0 100 80" width="20" height="20">
 					<rect width="100" height="15" />
@@ -53,12 +51,12 @@
 				</svg>
 			</div>
 			<div class="w-full h-screen lg:h-full flex flex-col items-center justify-center gap-6">
-				<span class="text-6xl font-bold text-white text-center lg:text-start"
-					>BE THE HERO OF YOUR LIFE</span
+				<h1 class="text-6xl font-bold text-white text-center lg:text-start"
+					>BE THE HERO OF YOUR LIFE</h1
 				>
-				<span class="text-2xl font-medium tracking-wide text-white text-center lg:text-start"
+				<h2 class="text-2xl font-medium tracking-wide text-white text-center lg:text-start"
 					>Transform your aspirations into actionable plans and live a life of success and
-					fulfillment with GoalBash.</span
+					fulfillment with GoalBash.</h2
 				>
 				<div
 					id="scroll-down"

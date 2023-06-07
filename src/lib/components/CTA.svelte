@@ -15,14 +15,14 @@
 	];
 </script>
 
-<div
+<section
 	class="flex p-10 md:px-24 lg:px-32 py-40 font-tt-norms-pro overflow-x-hidden w-full items-center justify-center"
 >
 	<div class="flex flex-col md:flex-row items-center w-full max-w-7xl justify-center gap-16">
 		<img src="/castle.svg" alt="crown" class="w-72 h-72 object-contain" />
 		<div class="flex flex-col gap-2 items-center md:items-start text-center md:text-start">
-			<span class="text-4xl font-semibold">Motivated to achieve your goals?</span>
-			<span class="text-xl font-medium">Start your journey to success today!</span>
+			<h2 class="text-4xl font-semibold">Motivated to achieve your goals?</h2>
+			<h4 class="text-xl font-medium">Start your journey to success today!</h4>
 			<div class="flex flex-col lg:flex-row items-center justify-center gap-2 w-full pt-4">
 				{#each services as service}
 					<a
@@ -34,4 +34,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
