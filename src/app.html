@@ -19,16 +19,16 @@
 	}
 
 	.from-left {
-		transform: translateX(-50px);
+		transform: translateX(-50%);
 	}
 
 	.from-right {
-		transform: translateX(50px);
+		transform: translateX(50%);
 	}
 
 	.from-left,
 	.from-right {
-		transition: transform 300ms ease-in;
+		transition: opacity 250ms ease-in, transform 300ms ease-in;
 	}
 
 	.from-left.appear,
@@ -47,7 +47,7 @@
 
 	const appearOptions = {
 		threshhold: 1,
-		rootMargin: '0px 0px -50px 0px',
+		rootMargin: '0px 0px -50px 0px'
 	};
 	const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
 		entries.forEach((entry) => {
@@ -58,8 +58,7 @@
 				appearOnScroll.unobserve(entry.target);
 			}
 		});
-	},
-	appearOptions);
+	}, appearOptions);
 
 	faders.forEach((fader) => {
 		appearOnScroll.observe(fader);
