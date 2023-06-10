@@ -56,7 +56,7 @@
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:max-w-7xl">
 		{#each features as feature}
 			<div
-				class="fade-in flex flex-col items-center md:items-start justify-center md:justify-start gap-2 bg-green-50 p-12 rounded-xl hover:bg-green-100 transition-all duration-500 ease-in-out"
+				class="fade-in-with-transition flex flex-col items-center md:items-start justify-center md:justify-start gap-2 bg-green-50 p-12 rounded-xl hover:bg-green-100 transition-all duration-500 ease-in-out"
 			>
 				<img src="/{feature.image}" alt={feature.name} class="w-36 h-36 object-contain" />
 				<div class="border-b-2 border-green-200 w-full mt-2 mb-2 border-dashed" />

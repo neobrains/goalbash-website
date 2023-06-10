@@ -26,6 +26,14 @@
 		transform: translateX(50%);
 	}
 
+	.fade-in-with-transition {
+		opacity: 0;
+		transition: opacity 500ms ease-in-out;
+		transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 0.3s;
+	}
+
 	.from-left,
 	.from-right {
 		transition: opacity 250ms ease-in, transform 300ms ease-in;
@@ -39,10 +47,15 @@
 	.fade-in.appear {
 		opacity: 1;
 	}
+
+	.fade-in-with-transition.appear {
+		opacity: 1;
+	}
 </style>
 
 <script>
 	const faders = document.querySelectorAll('.fade-in');
+	const fadersWithTransition = document.querySelectorAll('.fade-in-with-transition');
 	const sliders = document.querySelectorAll('.slide-in');
 
 	const appearOptions = {
@@ -55,7 +68,7 @@
 				return;
 			} else {
 				entry.target.classList.add('appear');
-				appearOnScroll.unobserve(entry.target);
+				// appearOnScroll.unobserve(entry.target); not removing for now as it is causing issues with the fade in
 			}
 		});
 	}, appearOptions);
@@ -66,5 +79,9 @@
 
 	sliders.forEach((slider) => {
 		appearOnScroll.observe(slider);
+	});
+
+	fadersWithTransition.forEach((fader) => {
+		appearOnScroll.observe(fader);
 	});
 </script>
