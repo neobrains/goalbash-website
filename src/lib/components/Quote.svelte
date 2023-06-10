@@ -6,7 +6,7 @@
 </script>
 
 <section
-	class="p-10 md:px-23 lg:px-32 py-36 md:py-32 lg:py-28 bg-indigo-50 flex flex-col justify-center items-center gap-4 overflow-x-hidden font-tt-norms-pro mt-20"
+	class="p-10 md:px-23 lg:px-32 py-36 md:py-32 lg:py-28 bg-indigo-50 flex flex-col justify-center items-center gap-4 overflow-x-hidden font-tt-norms-pro mt-20 fade-in"
 >
 	<img src="/coffee.svg" alt="coffee" class="w-28 h-28 object-contain" />
 	<p class="text-2xl font-semibold text-center w-full md:max-w-2xl">{quote.text}</p>

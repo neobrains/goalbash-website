@@ -39,7 +39,7 @@
 	</h2>
 	<div class="flex flex-col lg:flex-row gap-4 items-start w-full max-w-4xl">
 		<div
-			class="w-full lg:w-2/5 border-2 flex flex-col p-8 rounded-2xl bg-gray-200 gap-4 hover:shadow-2xl transition-all duration-500 ease-in-out"
+			class="w-full lg:w-2/5 border-2 flex flex-col p-8 rounded-2xl bg-gray-200 gap-4 hover:shadow-2xl transition-all duration-500 ease-in-out fade-in"
 		>
 			<h4
 				class="text-sm font-semibold px-4 py-1 border-2 border-gray-800 max-w-max rounded-full hover:bg-black hover:text-white transition duration-300 ease-in-out"
@@ -74,7 +74,7 @@
 		</div>
 
 		<div
-			class="w-full lg:w-3/5 flex flex-col p-8 rounded-2xl bg-black gap-4 hover:shadow-2xl transition-all duration-500 ease-in-out"
+			class="w-full lg:w-3/5 flex flex-col p-8 rounded-2xl bg-black gap-4 hover:shadow-2xl transition-all duration-500 ease-in-out fade-in"
 		>
 			<h4
 				class="text-sm font-semibold text-white px-4 py-1 border-2 border-white max-w-max rounded-full hover:bg-white hover:text-black transition duration-300 ease-in-out"

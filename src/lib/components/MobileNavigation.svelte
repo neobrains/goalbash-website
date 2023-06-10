@@ -50,7 +50,7 @@
 		{#each nav as navbar_item}
 			<div
 				data-target={navbar_item.loc}
-				class="text-2xl tracking-wider font-semibold px-4 py-2 border-t-2 hover:border-green-500 transition duration-300 ease-in-out nav-scroll-to"
+				class="text-2xl tracking-wider font-semibold px-4 py-2 border-t-2 hover:border-green-500 transition duration-300 ease-in-out nav-scroll-to fade-in"
 			>
 				{navbar_item.name}
 			</div>

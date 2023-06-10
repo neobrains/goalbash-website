@@ -11,3 +11,61 @@
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
+
+<style>
+	.fade-in {
+		opacity: 0;
+		transition: opacity 250ms ease-in;
+	}
+
+	.from-left {
+		transform: translateX(-50px);
+	}
+
+	.from-right {
+		transform: translateX(50px);
+	}
+
+	.from-left,
+	.from-right {
+		transition: transform 300ms ease-in;
+	}
+
+	.from-left.appear,
+	.from-right.appear {
+		transform: translateX(0);
+	}
+
+	.fade-in.appear {
+		opacity: 1;
+	}
+</style>
+
+<script>
+	const faders = document.querySelectorAll('.fade-in');
+	const sliders = document.querySelectorAll('.slide-in');
+
+	const appearOptions = {
+		threshhold: 1,
+		rootMargin: '0px 0px -50px 0px',
+	};
+	const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+		entries.forEach((entry) => {
+			if (!entry.isIntersecting) {
+				return;
+			} else {
+				entry.target.classList.add('appear');
+				appearOnScroll.unobserve(entry.target);
+			}
+		});
+	},
+	appearOptions);
+
+	faders.forEach((fader) => {
+		appearOnScroll.observe(fader);
+	});
+
+	sliders.forEach((slider) => {
+		appearOnScroll.observe(slider);
+	});
+</script>

@@ -53,7 +53,7 @@
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div
 					on:click={() => (current = current === faq.qno ? null : faq.qno)}
-					class="p-8 rounded-2xl bg-green-100 border-2 border-black"
+					class="p-8 rounded-2xl bg-green-100 border-2 border-black fade-in"
 				>
 					<button class="font-medium">
 						<p class="text-start">{faq.question}</p>

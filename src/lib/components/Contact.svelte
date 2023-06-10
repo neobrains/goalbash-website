@@ -7,7 +7,7 @@
 	class="flex flex-col w-full p-10 md:px-24 lg:px-32 font-tt-norms-pro overflow-x-hidden items-center"
 >
 	<div class="flex flex-col w-full max-w-7xl gap-16">
-		<div class="flex flex-col items-center lg:items-start gap-2">
+		<div class="flex flex-col items-center lg:items-start gap-2 fade-in">
 			<h2 class="text-4xl font-medium tracking-wider text-center lg:text-start w-full"
 				>Love to hear from you,</h2
 			>
@@ -15,7 +15,7 @@
 				>Get in touch 👋</h2
 			>
 		</div>
-		<form id="contactform" class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
+		<form id="contactform" class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full fade-in">
 			<div class="flex flex-col gap-2">
 				<label for="name" class="text-lg font-medium">Name</label>
 				<input
@@ -63,7 +63,7 @@
 			</div>
 		</form>
 		<button
-			class="px-4 lg:px-36 py-2 text-white bg-black w-full lg:max-w-max hover:cursor-ne-resize"
+			class="px-4 lg:px-36 py-2 text-white bg-black w-full lg:max-w-max hover:cursor-ne-resize fade-in"
 			>Just Send ↗</button
 		>
 	</div>
