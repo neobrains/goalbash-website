@@ -38,7 +38,7 @@
 			<div class="flex flex-col gap-4 items-center lg:items-start">
 				{#each about as card}
 					<div
-						class="fade-in flex flex-row items-center gap-4 bg-green-50 p-8 rounded-xl w-full hover:shadow-md hover:bg-green-100 transition-all duration-500 ease-in-out"
+						class="fade-in flex flex-row items-center gap-4 bg-green-50 p-8 rounded-xl w-full hover:bg-green-100 transition-all duration-500 ease-in-out"
 					>
 						<h2 class="text-6xl md:text-7xl">{card.index}.</h2>
 						<p class="text-xs lg:text-base font-medium text-center md:text-start max-w-7xl">
