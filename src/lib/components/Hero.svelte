@@ -50,7 +50,7 @@
 					<rect y="60" width="100" height="15" />
 				</svg>
 			</div>
-			<div class="w-full h-screen lg:h-full flex flex-col items-center justify-center gap-6">
+			<div class="w-full h-screen lg:h-full flex flex-col items-center justify-center gap-6 hero-text-slide-in">
 				<h1 class="text-6xl font-bold text-white text-center lg:text-start"
 					>BE THE HERO OF YOUR LIFE</h1
 				>

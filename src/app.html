@@ -51,6 +51,21 @@
 	.fade-in-with-transition.appear {
 		opacity: 1;
 	}
+
+	.hero-text-slide-in {
+		transition: hero-text-slide-in-animation 500ms ease-in;
+	}
+
+	@keyframes hero-text-slide-in-animation {
+		0% {
+			opacity: 0;
+			transform: translateY(50%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 </style>
 
 <script>
@@ -65,10 +80,12 @@
 	const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
 		entries.forEach((entry) => {
 			if (!entry.isIntersecting) {
+				console.log('not intersecting');
 				return;
 			} else {
 				entry.target.classList.add('appear');
-				// appearOnScroll.unobserve(entry.target); not removing for now as it is causing issues with the fade in
+				appearOnScroll.unobserve(entry.target);
+				console.log('intersecting');
 			}
 		});
 	}, appearOptions);
