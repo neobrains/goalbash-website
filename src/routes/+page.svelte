@@ -48,23 +48,33 @@
 </script>
 
 <svelte:head>
+	<!-- HTML Meta Tags -->
 	<title>GoalBash</title>
-	<meta name="title" content="GoalBash" />
-	<meta name="description" content="GoalBash is a goal tracking app that helps you achieve your goals by breaking them down into small actionable steps." />
+	<meta
+		name="description"
+		content="GoalBash is a goal tracking app that helps you achieve your goals by breaking them down into small actionable steps."
+	/>
 
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website" />
+	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content="https://goalbash.neobrains.dev" />
+	<meta property="og:type" content="website" />
 	<meta property="og:title" content="GoalBash" />
-	<meta property="og:description" content="GoalBash is a goal tracking app that helps you achieve your goals by breaking them down into small actionable steps." />
-	<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+	<meta
+		property="og:description"
+		content="GoalBash is a goal tracking app that helps you achieve your goals by breaking them down into small actionable steps."
+	/>
+	<meta property="og:image" content="https://goalbash.neobrains.dev/goalbash.png" />
 
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="twitter:domain" content="goalbash.neobrains.dev" />
 	<meta property="twitter:url" content="https://goalbash.neobrains.dev" />
-	<meta property="twitter:title" content="GoalBash" />
-	<meta property="twitter:description" content="GoalBash is a goal tracking app that helps you achieve your goals by breaking them down into small actionable steps." />
-	<meta property="twitter:image" content="https://goalbash.neobrains.dev/goalbash.png" />
+	<meta name="twitter:title" content="GoalBash" />
+	<meta
+		name="twitter:description"
+		content="GoalBash is a goal tracking app that helps you achieve your goals by breaking them down into small actionable steps."
+	/>
+	<meta name="twitter:image" content="https://goalbash.neobrains.dev/goalbash.png" />
 </svelte:head>
 
 <Hero />
